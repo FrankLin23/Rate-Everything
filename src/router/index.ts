@@ -3,7 +3,15 @@ import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router';
 export const constantRoutes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    component: () => import('../views/404.vue'),
+    component: () => import('@/views/Home/index.vue'),
+  },
+  {
+    path: '/404',
+    component: () => import('@/views/404.vue'),
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    component: () => import('@/views/404.vue'),
   },
 ];
 
